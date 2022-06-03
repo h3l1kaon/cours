@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- l'attribut action permet d'indiquer quelle page traitera le formulaire -->
+    <!-- la méthode indique si le formulaire doit envoyer ses informations en get ou en post -->
+    <!-- confindentiel = post sinon = get -->
+    <form action="" method="get">
+      <label for="prenom">Prénom</label>
+      <input type="text" id="prenom" />
+      <hr />
+      <label for="birthday">date de naissance</label>
+      <input type="date" name="birthday" id="birthday" required />
+      <hr />
+      <label for="color">Couleur favorite:</label>
+      <input type="color" name="colorFav" id="color" />
+      <hr />
+      <label for="email">email</label>
+      <input type="email" name="email" id="email" />
+      <hr />
+      <label for="password">password</label>
+      <input type="password" name="password" id="password" />
+      <hr />
+      <label for="cv">donnez votre cv</label>
+      <input type="file" name="cv" id="cv" />
+      <hr />
+      <label for="commentaire">laissez un commentaire</label>
+      <!-- <textarea name="commentaire" id="commentaire" cols="30" rows="10"><textarea> -->
+      <hr />
+      <fieldset>
+        <legend>Choisi ton langage préféré</legend>
+        <input type="radio" name="favLang" id="html" />
+        <label for="html">html</label>
+        <br />
+        <input type="radio" name="favLang" id="css" />
+        <label for="css">css</label>
+        <br />
+        <input type="radio" name="favLang" id="js" />
+        <label for="js">js</label>
+        <br />
+      </fieldset>
+
+      <input type="submit" value="submit" />
+    </form>
+  </body>
+</html>

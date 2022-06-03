@@ -1,0 +1,72 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: aliceblue;
+}
+
+ul {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 5px;
+  background-color: black;
+  z-index: 5;
+  width: 100%;
+} */
+li {
+  margin: 1rem 0;
+  display: inline-block;
+  list-style: none;
+}
+li > button {
+  aspect-ratio: 4/2;
+  font-size: 3em;
+  cursor: pointer;
+  background-color: black;
+  color: aliceblue;
+  padding: 2px 15px;
+  border-radius: 5%;
+  outline: none;
+}
+li:nth-child(1) > button {
+  background-color: blue;
+  transition-property: background-color color transform;
+  transition-duration: 1s, 0.5s;
+  transition-delay: 0.3s;
+  transition-timing-function: linear;
+}
+li:nth-child(1) > button:hover {
+  background-color: darkblue;
+  color: orange;
+  transform: rotate(360deg);
+}
+li:nth-child(2) > button {
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: steps(5, jump-start);
+}
+li:nth-child(2) > button:hover {
+  border-radius: 50%;
+}
+li:nth-child(3) > button {
+  transition: all 0.2s 0.5s linear;
+}
+li:nth-child(3) > button:active {
+  box-shadow: 10px 50px 2px red;
+}
+li:nth-child(4) > button {
+}
+li:nth-child(5) > button {
+}

@@ -1,0 +1,158 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+div {
+  width: 48%;
+  height: 200px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: 300px;
+  text-align: center;
+  height: 50px;
+  background-color: black;
+  color: aliceblue;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* 1------- -> solution: retirer la property transform sur le hover pour que le rotate ne s'effectue que sur le retour */
+/* div:first-child button {
+  background-color: white;
+  color: darkgray;
+  border: 2px solid darkgray;
+  border-radius: 0;
+  transition-property: border-color, color, background-color, transform;
+  transition-duration: 0.5s, 0.5s, 0.5s, 1.5s;
+  transform: rotateY(0);
+}
+div:first-child button:hover {
+  background-color: rgb(175, 100, 100);
+  color: rgba(138, 10, 10, 0.829);
+  transform: rotateY(360deg);
+  transition-property: border-color, color, background-color;
+} */
+
+div:nth-child(2) button {
+  transition-property: transform, border-color, color, border-radius;
+  transition-duration: 0.3s, 0.3s, 0.3s, 0.3s;
+}
+
+div:nth-child(2) button:hover {
+  transform: scale(0.9);
+  border: 1px solid red;
+  border-radius: 20px;
+  color: red;
+}
+div:nth-child(2) button span {
+  background-color: red;
+  font-weight: 900;
+  padding: 15px;
+  border-radius: 50%;
+  color: #fff;
+  transition-property: color, background-color, transform;
+  transition-duration: 0.5s, 0.5s, 1.5s;
+}
+div:nth-child(2) button:hover span {
+  background-color: #fff;
+  color: red;
+  font-weight: 900;
+  padding: 5px;
+  border-radius: 50%;
+  color: #000;
+  transform: rotate(360deg);
+  transition-property: border-color, color, background-color;
+}
+div:nth-child(3) button {
+  transition-property: transform;
+  transition-duration: 0.5s, 0.5s, 1.5s;
+}
+div:nth-child(3) button:hover {
+}
+
+div:nth-child(4) div {
+  display: flex;
+  flex-direction: column;
+}
+div:nth-child(4) button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  outline: none;
+}
+
+div:nth-child(4) span {
+  display: none;
+  width: 200px;
+  background-color: #000;
+  height: 2px;
+  transition: all 1s;
+}
+div:nth-child(4) div:hover span:nth-child(1) {
+  display: block;
+}
+div:nth-child(4) span:nth-child(2) {
+}
+
+div:nth-child(4) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div:nth-child(4) button {
+  position: relative;
+  display: block;
+  font-size: 2rem;
+  color: #000000;
+  text-transform: uppercase;
+  padding: 4px 0;
+  transition: 0.5s;
+}
+div:nth-child(4) button::after,
+div:nth-child(4) button::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: #000;
+  transition: transform 0.5s;
+  transform: scaleX(0);
+}
+div:nth-child(4) button::after {
+  top: 100%;
+  left: 0;
+  transform-origin: right;
+}
+div:nth-child(4) button::before {
+  bottom: 100%;
+  right: 0;
+  transform-origin: left;
+}
+div:nth-child(4) button:hover {
+  color: #000000;
+}
+div:nth-child(4) button:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+div:nth-child(4) button:hover::before {
+  transform: scaleX(1);
+  transform-origin: right;
+}

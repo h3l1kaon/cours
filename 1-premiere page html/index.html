@@ -1,0 +1,100 @@
+<!-- indique au navigateur que le fichier est en html -->
+<!DOCTYPE html>
+<!-- lang => language ; tout le code visible est contenu dans la balise html -->
+<html lang="fr">
+  <!-- head contient des infos utiles au navigateur -->
+  <head>
+    <!-- les balises meta, chacune contient un attribut différent -->
+    <!-- utf-8 = format de carractères le plus courant  -->
+    <meta charset="UTF-8" />
+    <!-- pour la compatibilité aux anciens navigateurs -->
+    <meta http-equiv="X-UA-compatible" content="IE=edge" />
+    <!-- name = ce qu'elle doit cibler, le viewport = la partie visible de la page sur le navigateur -->
+    <!-- content = on indique que la page doit prendre la largeur de l'appareil qui l'utilise -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="z" />
+    <!-- description de la page peut être utilisée par certains moteurs de recherche -->
+    <meta name="description" content="Ma première page html" />
+    <!-- keywords aident au referencement de la page sur les moteurs de recherche -->
+    <meta name="keywords" content="html, head, balises, meta tag" />
+    <!-- titre de la page , s'affiche dans l'onglet ou favoris-->
+    <!-- La balise link permet de lier un fichier à la page. Ici on lui indique dans l'attribut rel que c'est un fichier pour l'image de raccourci. Dans l'attribut type on lui indique le type de l'image. Et dans l'attribut href le chemin vers l'image -->
+    <link rel="shortcut icon" href="./th-1226150702.jpg" type="image/x-icon" />
+    <title>Ma première page</title>
+  </head>
+  <!-- body =  toute la structure de la page / ce qui s'affichera -->
+  <body>
+    <!-- balise de type block sans autre effet, simplement pour organiser la page -->
+    <header>
+      <nav>
+        <!-- ul => unordered list -->
+        <ul>
+          <!-- list item -->
+          <li><a href="./tab.html">Tableaux</a></li>
+          <li><a href="./form.html">form</a></li>
+          <li>menu</li>
+          <li>menu</li>
+          <li>menu</li>
+        </ul>
+        <!-- ol => ordered list -->
+        <ol>
+          <li><a href="https://google.fr" target="_blank">google</a></li>
+          <li>menu</li>
+          <li>menu</li>
+          <li>menu</li>
+        </ol>
+      </nav>
+    </header>
+    <!-- balise de type block sans autre effet, simplement pour organiser la page -->
+    <main>
+      <h1>Un super titre</h1>
+      <!-- la norme est de fournir un titre au sections -->
+      <section>
+        <h2>Grosse section</h2>
+        <article>
+          <h3>Article brillant</h3>
+          <p>
+            <!-- bloc qui ne peut contenir que des balises inline => pas d'autres blocs -->
+            Lorem ipsum dolor sit amet
+            <strong>consectetur adipisicing elit.</strong>
+            <br />
+            <u
+              >Aliquam sequi consequuntur necessitatibus minima et fugiat ullam
+              animi</u
+            >
+            <!-- i => pour les citations -->
+            <i>unde debitis ex rerum,</i> corporis facere voluptate consequatur
+
+            <!-- em = emphase sur un point -->
+            <em>incidunt in dolores officia? Rem!</em>
+
+            <br />
+            Aimez vois le <abbr title="Hypertext Markup Language">HTML</abbr>?
+          </p>
+          <hr />
+          <p>
+            <!-- bloc qui ne peut contenir que des balises inline => pas d'autres blocs -->
+            <img src="./th-1226150702.jpg" alt="alien" />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+            sequi consequuntur necessitatibus minima et fugiat ullam animi unde
+            debitis ex rerum, corporis facere voluptate consequatur incidunt in
+            dolores officia? Rem!
+          </p>
+        </article>
+        <article>
+          <h4>Article annecdotique</h4>
+        </article>
+        <article>
+          <h5>Article ridicule</h5>
+        </article>
+        <article>
+          <h6>Article invisible</h6>
+        </article>
+      </section>
+    </main>
+    <!-- balise de type block sans autre effet, simplement pour organiser la page -->
+    <footer></footer>
+  </body>
+</html>
+
+<!-- voir "caniinclude.com" pour savoir quelles balises sont compatibles -->

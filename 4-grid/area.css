@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-areas:
+    "header header header header header header"
+    "menu article article article chaussette chaussette"
+    "menu footer footer footer footer footer";
+  /* overflow: hidden; */
+  grid-gap: 1px;
+}
+
+body div {
+  /* min-width: 16.6%;
+  max-width: 16.6%; */
+
+  /* max-width: 100%; */
+  border: 1px black solid;
+  background-image: url("https://source.unsplash.com/random");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+div:hover {
+  transform: scale(3);
+}
+.item1 {
+  grid-area: header;
+}
+.item2 {
+  grid-area: menu;
+}
+.item3 {
+  grid-area: article;
+}
+.item4 {
+  grid-area: chaussette;
+}
+.item5 {
+  grid-area: footer;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

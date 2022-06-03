@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  font-family: "Satisfy", cursive;
+}
+h1 {
+  text-align: center;
+}
+
+main {
+  padding: 50px;
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-row-gap: 40px;
+  grid-column-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  overflow-wrap: normal;
+  border: none;
+}
+
+.card {
+  /* background-color: lightgray; */
+  height: 400px;
+  width: 100%;
+  max-width: 450px;
+  min-width: 250px;
+  overflow: hidden;
+  position: relative;
+
+  box-shadow: 5px 10px 18px #4d4949;
+  cursor: pointer;
+  margin: 0 auto;
+  background-color: aliceblue;
+  color: black;
+}
+.card:hover {
+  transform: scale(1.01);
+}
+
+.image {
+  height: 65%;
+  width: 100%;
+  background-image: url("https://source.unsplash.com/random");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card_text {
+  min-height: 35%;
+  padding: 5px 15px;
+  border: none;
+}
+.truc_gris {
+  height: 15px;
+  background-color: grey;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.title {
+  text-transform: capitalize;
+  background-color: aliceblue;
+}
+.description {
+  background-color: aliceblue;
+  font-weight: lighter;
+  color: grey;
+  margin-top: 10px;
+}
+@media (max-width: 810px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+  }
+}
+@media (max-width: 500px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+}

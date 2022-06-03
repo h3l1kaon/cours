@@ -1,0 +1,154 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  /* 200px content => 200 + padding + bordure */
+  /* 200px border box => 200px  */
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkblue;
+}
+footer {
+  /* !important pour garder la priorité sur toutes les autres instructions */
+  background-color: darkslategray;
+}
+main p {
+  /* on selectionne tout les p du site se trouvant dans un main peu importe s'il
+    y a d'autres balises les séparant */
+  background-color: lightsalmon;
+}
+
+main > p {
+  /* On selectionne uniquement les p qui sont les enfants directs du main */
+  background-color: olive;
+}
+
+h3 + li {
+  /* on selectionne le premier element qui suit h3 */
+  background-color: peachpuff;
+}
+
+h3 ~ li {
+  /* selectionne tout les li qui suivent un h3 */
+  background-color: yellowgreen;
+}
+
+/*              Les Pseudo Classes           */
+
+/* les pseudo classes sont écrites: ":nom" */
+li:hover {
+  background-color: deeppink;
+}
+
+li:nth-of-type(3) {
+  background-color: brown;
+}
+
+/* tout les 2 elements */
+li:nth-of-type(2n) {
+  background-color: aliceblue;
+}
+/* le dernier element (le premier en partant de la fin) */
+li:nth-last-child(1) {
+  background-color: black;
+  color: antiquewhite;
+}
+
+/* pour changer un lien il faut le viser directement */
+h1 a {
+  color: darkorange;
+}
+
+h1 a:active {
+  color: blue;
+}
+h1 a:visited {
+  color: red;
+}
+
+/* colore tout les spans dans les paragraphes qui ne sont pas les deuxièmes de ce type */
+p span:not(:nth-of-type(2)) {
+  color: magenta;
+}
+
+/*  tout ce qui n'est pas le h1 ou a => 20px */
+*:not(h1, a) {
+  font-size: 20px;
+}
+
+/*                      Les Pseudos elements            */
+
+/* la première lettre de tout les p qui se trouvent dans l'article vont faire 50px */
+article p::first-letter {
+  font-size: 50px;
+}
+
+/* la première ligne des p qui sont les enfants direct de main sera en gras */
+main > p::first-line {
+  font-weight: 900;
+}
+
+/* before vient intercaler un element avant l'élément ciblé */
+h1::before {
+  content: "c'est faux ";
+  color: coral;
+}
+/* before vient intercaler un element avant l'élément ciblé */
+h1::after {
+  content: " <-- il ment !";
+  color: coral;
+}
+
+/*                    Classes Ids et Attributs               */
+
+/* 
+pour cibler 
+
+Ids => "#" 
+Classes => "."
+
+*/
+
+#importantMenu {
+  font-size: 42px;
+  font-weight: 700;
+  color: red;
+}
+
+.notImportant {
+  font-size: 15px;
+  color: grey;
+}
+/* tout les a qui possedent l'attribut target */
+a[target] {
+  font-style: italic;
+}
+
+/* tout les liens ayant l'attribut href et qui contiennent "amazon" */
+a[href*="amazon"] {
+  font-family: monospace;
+}
+/*  tout les lien dont l'attribut href termine par .fr */
+a[href$=".fr"] {
+  background-color: blue;
+}
+/* pour tout les liens qui commencent par https => insertion de content ::before */
+a[href^="https"]::before {
+  content: "^^";
+}
+
+/* selection de plusieurs elements différents avec la virgule */
+article p,
+li:nth-child(2),
+header p {
+  font-family: cursive;
+}
+
+/*                  unités de mesure              */
+
+/* 1em = la même taille que la police */
+/* rem = se refere à la taille de la police par defaut du navigateur, pas par la police de l'élément parent */
+/* aspect-ratio: 1/1 */

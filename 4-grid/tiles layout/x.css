@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body > div {
+  height: 300px;
+  width: 300px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+div > div {
+  background-color: black;
+  border-radius: 50%;
+  margin: 10px;
+  height: 150px;
+  width: 150px;
+  position: absolute;
+}
+div > div:nth-child(1) {
+  top: 15%;
+}
+div > div:nth-child(2) {
+  top: 35%;
+  right: 37%;
+}
+div > div:nth-child(3) {
+  top: 35%;
+  left: 37%;
+}
