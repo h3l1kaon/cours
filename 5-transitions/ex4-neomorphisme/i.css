@@ -1,0 +1,48 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#neomorpheus {
+  height: 500px;
+  width: 500px;
+  border: 1px black dotted;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(58, 57, 57);
+}
+button {
+  cursor: pointer;
+  perspective: 8000px;
+  outline: none;
+  background-color: inherit;
+  color: rgb(48, 46, 46);
+  font-size: 2.5em;
+  border-right: 1px rgb(49, 49, 49) solid;
+  border-bottom: 1px rgb(49, 49, 49) solid;
+  border-top: 1px rgb(80, 80, 80) solid;
+  border-left: 1px rgb(80, 80, 80) solid;
+  padding: 35px;
+  border-radius: 25%;
+  text-shadow: #111 0 0 1px, rgba(255, 255, 255, 0.1) 0 1px 3px;
+  box-shadow: -9px -9px 18px -3px rgba(255, 255, 255, 0.075),
+    19px 19px 18px -3px rgba(10, 10, 10, 0.23);
+}
+span {
+  font-stretch: ultra-condensed;
+  perspective: 0;
+  transform: scaleY(5);
+  vertical-align: top;
+}
+button:hover {
+  transform: scale(0.98);
+}

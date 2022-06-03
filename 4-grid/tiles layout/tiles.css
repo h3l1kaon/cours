@@ -15,7 +15,21 @@ body {
 h1 {
   color: aliceblue;
 }
-
+button {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  padding: 8px 13px;
+  background-color: inherit;
+  color: aliceblue;
+  border: 3px solid white;
+  border-radius: 75%;
+  cursor: pointer;
+}
+button:hover {
+  color: rgb(197, 112, 8);
+  border-color: rgb(197, 112, 8);
+}
 .tiles {
   display: grid;
   grid-template: repeat(5, 1fr) / repeat(4, 1fr);

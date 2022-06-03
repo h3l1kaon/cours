@@ -69,11 +69,9 @@ const setRandoms = () => {
         .catch((err) => console.error(err));
     }, 1500 * i);
   });
+  console.log("hehe");
 };
-setRandoms();
 
-const b = document.createElement("button");
-b.innerText = "try Me mother*****";
-b.addEventListener("click", () => setRandoms());
-const body = document.querySelector("body");
-body.appendChild(b);
+const button = document
+  .querySelector("#changePictures")
+  .addEventListener("click", () => setRandoms());

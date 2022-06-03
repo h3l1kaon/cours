@@ -40,7 +40,7 @@ body > div:nth-child(2) {
   background-color: black;
   margin: 0 15px;
   border-radius: 50%;
-  animation: mymove 0.7s infinite linear;
+  animation: mymove 1s infinite linear;
 }
 
 .ball:nth-child(2) {
@@ -49,16 +49,19 @@ body > div:nth-child(2) {
 .ball:nth-child(3) {
   animation-delay: 0.3s;
 }
+.active_ball {
+  animation: bordel 1s infinite linear;
+}
 
 @keyframes mymove {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0%) scale(1, 0.75);
   }
   25% {
-    transform: translateY(-100%);
+    transform: translateY(-100%) scale(1, 0.9);
   }
   50% {
-    transform: translateY(-120%);
+    transform: translateY(-120%) scale(1, 1);
   }
   75% {
     transform: translateY(-100%);
@@ -70,19 +73,42 @@ body > div:nth-child(2) {
     transform: translateY(-50%);
   }
   100% {
-    transform: translateY(0%);
+    transform: translateY(0%) scale(0.8, 0.75);
   }
 }
+
+@keyframes bordel {
+  0% {
+    transform: translate(0%) scale(1, 0.75);
+  }
+  25% {
+    transform: translate(-120%, 250%);
+  }
+  50% {
+    transform: translate(-200%, 400%);
+  }
+  50% {
+    transform: translate(-50%, 700%);
+  }
+  50% {
+    transform: translate(300%, -30%);
+  }
+  100% {
+    transform: translate(0%) scale(0.8, 0.75);
+  }
+}
+
 /*                                                     circles  */
 
 .circles {
+  display: block;
   position: relative;
   height: 300px;
   width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px black dotted;
+  border: 5px black dotted;
 }
 .circles > div {
   position: absolute;
@@ -90,32 +116,74 @@ body > div:nth-child(2) {
   border-left: none;
   border-top: none;
   border-bottom: none;
-  animation: mymove2 0.8s linear infinite;
+  animation: mymove2 2s linear infinite;
+  /* transition: background-color; */
 }
 .circle1 {
   width: 250px;
   height: 250px;
   border: 5px red solid;
+  animation-delay: 0.4s !important;
 }
 .circle2 {
   width: 200px;
   height: 200px;
   border: 4px rgb(251, 255, 0) solid;
-  animation-delay: 0.3s !important;
+  animation-delay: 0.4s !important;
 }
 .circle3 {
   width: 150px;
   height: 150px;
   border: 4px rgb(4, 0, 255) solid;
-  animation-delay: 0.5s !important;
+  animation-delay: 0.4s !important;
+}
+.circle4 {
+  width: 100px;
+  height: 100px;
+  border: 4px rgb(24, 179, 45) solid;
+  animation-delay: 0.4s !important;
+}
+.circle5 {
+  width: 50px;
+  height: 50px;
+  border: 4px rgb(255, 0, 0) solid;
+  animation-delay: 0.3s !important;
 }
 
+.dot {
+  width: 5px;
+  height: 5px;
+  display: block;
+  background-color: white;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid black;
+  animation: mymove2 2s linear infinite;
+}
+#test {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: aliceblue;
+}
 @keyframes mymove2 {
   0% {
     transform: rotate(0);
   }
+  25% {
+    transform: rotate(125deg);
+    border-right-width: 2px;
+    border-left: 1px solid rgb(255, 255, 255);
+  }
   50% {
     transform: rotate(180deg);
+    border-right-width: 2px;
+    border-left: 1px solid rgb(255, 255, 255);
+  }
+  75% {
+    transform: rotate(260deg);
+    border-color: rgb(255, 255, 255);
+    border-right-width: 2px;
   }
   100% {
     transform: rotate(360deg);
