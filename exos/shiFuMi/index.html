@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./index.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<title>ShiFuMi</title>
+	</head>
+	<body>
+		<div class="overlay">
+			<div class="opponent_row cards">
+				<div class="relative">
+					<div class="scene scene--card">
+						<div class="card" id="ia_rock">
+							<div class="card__face card__face--front"></div>
+							<div class="card__face card__face--back">
+								<div class="relative rock icon">
+									<i class="fa-solid fa-hand-back-fist"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="relative">
+					<div class="scene scene--card">
+						<div class="card" id="ia_paper">
+							<div class="card__face card__face--front"></div>
+
+							<div class="card__face card__face--back paper">
+								<div class="relative paper icon">
+									<i class="fa-solid fa-hand"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="relative">
+					<div class="scene scene--card">
+						<div class="card" id="ia_scissors">
+							<div class="card__face card__face--front"></div>
+							<div class="card__face card__face--back">
+								<div class="relative scissors icon">
+									<i class="fa-solid fa-hand-scissors"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="score_div">
+				<h4><b id="winner"></b></h4>
+				<table>
+					<table>
+						<tr>
+							<th>Joueur</th>
+							<th>I.A.</th>
+							<th>Nuls</th>
+							<th>Total</th>
+						</tr>
+						<tr>
+							<td id="player_score">0</td>
+							<td id="ia_score">0</td>
+							<td id="ties">0</td>
+							<td id="total">0</td>
+						</tr>
+					</table>
+				</table>
+			</div>
+			<div class="player_row cards">
+				<div class="relative">
+					<div class="scene scene--card">
+						<div class="card" id="rock">
+							<div class="card__face card__face--front">
+								<div class="relative rock icon">
+									<i class="fa-solid fa-hand-back-fist"></i>
+								</div>
+							</div>
+							<div class="card__face card__face--back">
+								<div class="relative rock icon">
+									<i class="fa-solid fa-hand-back-fist"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="relative">
+					<div class="scene scene--card">
+						<div class="card" id="paper">
+							<div class="card__face card__face--front">
+								<div class="relative paper icon">
+									<i class="fa-solid fa-hand"></i>
+								</div>
+							</div>
+							<div class="card__face card__face--back">
+								<div class="relative paper icon">
+									<i class="fa-solid fa-hand"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="relative">
+					<div class="scene scene--card">
+						<div class="card" id="scissors">
+							<div class="card__face card__face--front">
+								<div class="relative scissors icon">
+									<i class="fa-solid fa-hand-scissors"></i>
+								</div>
+							</div>
+							<div class="card__face card__face--back">
+								<div class="relative scissors icon">
+									<i class="fa-solid fa-hand-scissors"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="./index.js" defer></script>
+</html>

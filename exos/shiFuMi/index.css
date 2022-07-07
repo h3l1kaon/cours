@@ -1,0 +1,157 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url('./assets/images/bg.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.overlay {
+	height: 100%;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+.cards {
+	width: 90%;
+	height: 40%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.score_div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 1px solid black;
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 30%;
+	height: 15%;
+	padding: 5px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+table,
+td,
+th {
+}
+th,
+td {
+	height: 35px;
+	width: 80px;
+	color: aliceblue;
+}
+table {
+	width: 100%;
+	text-align: center;
+}
+#winner {
+	font-size: 25px;
+}
+/*----------------------------------- card flip -----------------------------------*/
+
+.scene {
+	width: 170px;
+	height: 250px;
+	position: absolute;
+	perspective: 600px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.card {
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 1s;
+}
+.relative {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.icon i {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 100px;
+	z-index: 50;
+	color: #000;
+	backface-visibility: hidden;
+}
+
+.player_row .icon i {
+	transform: translate(-50%, -50%);
+}
+.player_row .card__face.card__face--front .icon i {
+	bottom: -90%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 40px;
+	color: #fff;
+}
+.card.is-flipped {
+	transform: translateX(-100%) rotateY(-180deg);
+}
+/* .card.is-flipped .card__face--front .icon > i {
+	font-size: 10px;
+} */
+.player_row div.card__face.card__face--front div.relative .icon i {
+	opacity: 0.2;
+}
+
+.card__face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	line-height: 260px;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	font-size: 40px;
+	backface-visibility: hidden;
+}
+
+.card__face--front {
+	background: red;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.opponent_row .card__face--front {
+	background-image: url('./assets/images/dragon.jpg');
+	border: 3px solid grey;
+}
+.player_row .card__face--front {
+	background-image: url('./assets/images/tiger.jpg');
+	border: 3px solid black;
+}
+.card__face--back {
+	background: white;
+	transform: rotateY(180deg);
+	background-image: url('./assets/images/card_bg.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+/*----------------------------------- end card flip -----------------------------------*/

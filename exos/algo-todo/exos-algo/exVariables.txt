@@ -1,0 +1,41 @@
+1.1
+b = 4
+a = 3
+
+1.2
+a = 2
+b = 3
+c = 1
+
+1.3
+a = 6
+b = 2
+
+1.4
+a = 13
+b = 13
+c = 13
+
+1.5
+a = 2
+b = 2
+
+1.6
+c = a
+a = b
+b = c
+
+1.7
+d = b
+b = a
+a = c
+c = d
+
+2.1
+val = 231
+double = 462
+
+2.2
+const num = window.prompt("num?")
+console.log(num * num)
+

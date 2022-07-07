@@ -1,0 +1,249 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+@font-face {
+	font-family: gory;
+	src: url('./assets/fonts/DoubleFeature20.ttf');
+}
+
+body {
+	background-color: black;
+	background-image: url('./assets/images/bg.jpg');
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100vw;
+	height: 100vh;
+	font-family: 'Press Start 2P', cursive;
+}
+.scene {
+	width: 200px;
+	height: 390px;
+	position: absolute;
+	perspective: 600px;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -50%);
+}
+
+.card {
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 1s;
+}
+.relative {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.card.is-flipped {
+	transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	line-height: 260px;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	font-size: 40px;
+	backface-visibility: hidden;
+}
+
+.card__face--front {
+	background: red;
+	background-image: url('./assets/images/fortune_card.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.card__face--back {
+	background: white;
+	transform: rotateY(180deg);
+}
+#reponse {
+	font-family: 'Press Start 2P', cursive;
+	color: #000;
+}
+#guess {
+	position: absolute;
+	bottom: 10%;
+	width: 380px;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+}
+#guessInput {
+	outline: none;
+	padding: 6px 10px;
+	margin: 10px;
+	width: 300px;
+}
+#guessInput:focus {
+	outline: none;
+}
+#submit {
+	width: 150px;
+	cursor: pointer;
+	padding: 6px 10px;
+	font-family: 'Press Start 2P', cursive;
+}
+
+.dialog {
+	position: absolute;
+	width: 500px;
+	padding: 10px;
+	background-color: #000;
+	right: 40px;
+	bottom: 150px;
+	border: 1px solid white;
+}
+.dialog #text {
+	color: aliceblue;
+	font-size: 20px;
+	font-family: 'Press Start 2P', cursive;
+}
+
+.chances {
+	color: aliceblue;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	border: 1px white solid;
+	font-size: 20px;
+	font-family: 'Press Start 2P', cursive;
+	padding: 20px;
+	text-align: center;
+}
+#chances_left {
+	margin-top: 20px;
+	color: green;
+}
+#reset {
+	position: absolute;
+	width: 150px;
+	cursor: pointer;
+	padding: 6px 10px;
+	right: 30px;
+	top: 10px;
+	font-family: 'Press Start 2P', cursive;
+}
+
+#level {
+	position: absolute;
+	bottom: 50px;
+	left: 50px;
+	border: 1px solid white;
+	text-align: center;
+	color: aliceblue;
+	font-size: 30px;
+	text-align: center;
+	padding: 15px;
+}
+
+#gameOver {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	z-index: 25;
+	background-color: #000;
+	height: 100%;
+	transform: translateY(-50%);
+	color: red;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	font-size: 70px;
+	opacity: 0;
+	transition: opacity 2s linear;
+	visibility: hidden;
+	font-family: gory;
+}
+#gameOver.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+#gameOver.active h1 {
+	animation: spin 1.8s linear;
+}
+#gameOver button {
+	margin-top: 20px;
+	width: 150px;
+	cursor: pointer;
+	padding: 6px 10px;
+	animation: fadeIn 4s linear, buzz infinite 2s 2.5s;
+	font-family: 'Press Start 2P', cursive;
+}
+#gameOver button:focus {
+	outline: 1px solid red;
+}
+@keyframes spin {
+	0% {
+		transform: scale(0.1) rotate(-660deg);
+
+		opacity: 0;
+	}
+
+	100% {
+		transform: scale(1) rotate(0);
+		opacity: 1;
+	}
+}
+@keyframes buzz {
+	from {
+		transform: translateX(-1%) rotate(1deg) scale(0.95);
+	}
+	to {
+		transform: translateX(2%) rotate(-2deg) scale(1.05);
+	}
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: scale(0.2);
+		visibility: hidden;
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+		visibility: visible;
+	}
+}
+
+#music {
+	position: absolute;
+	top: 5%;
+	right: 30px;
+	width: 50px;
+	height: 50px;
+	border: 1px solid white;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#music i {
+	color: aliceblue;
+	font-size: 15px;
+	padding: 20px;
+	cursor: pointer;
+}
+#pauseMusic {
+	display: none;
+}

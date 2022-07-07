@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* body {
+  padding: 3rem;
+  display: flex;
+}
+* body .card2 {
+  padding: 30px;
+}
+* body .card2 div {
+  width: 400px;
+  height: 500px;
+}
+* body .card2 div div {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://source.unsplash.com/random");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 10s linear;
+  background-color: darkorange;
+}
+* body .card2 div div button {
+  padding: 1rem 1.6rem;
+  text-transform: uppercase;
+  background-color: #000;
+  outline: none;
+  border: none;
+  color: aliceblue;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+* body .card2 div:hover div {
+  transform: rotateY(-1980deg);
+  background-image: none;
+}
+* body .card2 div:hover div button {
+  backface-visibility: visible;
+}
+
+/*# sourceMappingURL=style.css.map */

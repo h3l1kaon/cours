@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./index.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="./assets/fontawesome-free-6.1.1-web/css/all.min.css"
+		/>
+		<title>Devine le nombre!</title>
+		<link rel="icon" type="image/x-icon" href="./assets/images/favicon.jpg" />
+	</head>
+	<body>
+		<div id="music">
+			<i class="fa-solid fa-play" id="playMusic"></i>
+			<i class="fa-solid fa-pause" id="pauseMusic"></i>
+		</div>
+
+		<div class="scene scene--card">
+			<div class="card">
+				<div class="card__face card__face--front"></div>
+				<div class="card__face card__face--back">
+					<h1 id="reponse"></h1>
+				</div>
+			</div>
+		</div>
+		<div id="guess">
+			<input type="text" name="guess" id="guessInput" value="" />
+			<button type="submit" id="submit">Répondre</button>
+		</div>
+
+		<div class="dialog">
+			<h4 id="text"></h4>
+		</div>
+		<div class="chances">
+			<h4>Chances Restantes</h4>
+			<p id="chances_left"></p>
+		</div>
+		<button id="reset">Reset</button>
+
+		<div id="level">
+			<h4>Niveau 1</h4>
+		</div>
+		<div id="gameOver">
+			<h1>GAME OVER</h1>
+			<button id="restartBtn">Rejouer</button>
+		</div>
+	</body>
+	<script src="./index.js" type="module"></script>
+</html>

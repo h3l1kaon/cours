@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+body header {
+  height: 15rem;
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+}
+body header h1 {
+  font-size: 4rem;
+  text-decoration: underline black;
+}
+body #sidenav {
+  position: sticky;
+  float: left;
+  border: 1px black solid;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 15%;
+  background-color: red;
+}
+body main {
+  display: inline-block;
+  width: 83%;
+  padding: 3rem 5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
